@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Array Tutorial</h2>
+        <hr>
+        <h3>Array nasıl tanımlanır?</h3>
+        <code>var cars = ['mercedes', 'bmw', 'volvo', 'audi']</code>
+        <span> or </span>
+        <code>var cars = new Array('mercedes', 'bmw', 'volvo', 'audi')</code>
+    </div>
+    <div class="container">
+        <h3>toString Method</h3>
+        <p>Javascript array (dizi) metotlarından biri olan "toString", dizinin değerleni virgül ',' ile ayrılmış bir ifadeye dönüştürür.</p>
+        <strong>Usage toString() methot</strong>
+        <br>
+        <code>cars.toString()</code>
+        <p class="result">result : <span id="tutorial-array-1"></span></p>
+    </div>
+    <div class="container">
+        <h3>Join Methot</h3>
+        <p>"Join" metotu "toStiring" metotu gibi çalışır, tek farkı ayırıcı kendiniz belirleyebilirsiniz.</p>
+        <strong>Usage join() methot</strong>
+        <br>
+        <code>cars.join('*')</code> <span> or </span> <code>cars.join('-')</code>
+        <p class="result">result : <span id="tutorial-array-2"></span> or <span id="tutorial-array-3"></span></p>
+    </div>
+    <div class="container">
+        <h3>Pop Methot</h3>
+        <p>"Pop" metotu bir dizideki son elemanı diziden <u>çıkarır</u>.</p>
+        <strong>Usage pop() methot</strong>
+        <br>
+        <code>cars.pop()</code>
+        <p class="result">result : removed item <span id="tutorial-array-4"></span>, last state of the index <span id="tutorial-array-5"></span></p>
+    </div>
+    <div class="container">
+        <h3>Push Methot</h3>
+        <p>"Push" metotu bir dizinin son yeni bir eleman <u>ekler</u>.</p>
+        <strong>Usage push() methot</strong>
+        <br>
+        <code>cars.push('fiat')</code>
+        <p class="result">result : added item <span id="tutorial-array-6"></span>, last state of the index <span id="tutorial-array-7"></span></p>
+    </div>
+    <div class="container">
+        <h3>Shift Methot</h3>
+        <p>"Shift" metotu bir dizinin ilk elemanı diziden <u>çıkar</u>. Kalan elemanların indexlerini birer <u>eksiltir</u>.</p>
+        <strong>Usage shift() methot</strong>
+        <br>
+        <code>cars.shift()</code>
+        <p class="result">result : removed item <span id="tutorial-array-8"></span>, last state of the index <span id="tutorial-array-9"></span></p>
+    </div>
+    <div class="container">
+        <h3>UnShift Methot</h3>
+        <p>"UnShift" metotu bir dizinin ilk elemanın yerine yeni elemanı<u>ekler</u>. Eski elemanlarının index değerleni birer <u>artıtır</u>. Ayrıca unshift metodu ekleme işleminin sonucunda dizinin son uzunluk (length) bilgisini döner</p>
+        <strong>Usage unshift() methot</strong>
+        <br>
+        <code>cars.unshift('ford')</code>
+        <p class="result">result : added item <span id="tutorial-array-10"></span>, array length <span id="tutorial-array-11"></span> and last state of the index <span id="tutorial-array-12"></span></p>
+    </div>
+    <div class="container">
+        <h3>Splice Methot</h3>
+        <p>"Splice" metotu diziye yeni bir eleman eklemek için kulanılan başka bir yöntemdir. Dizi elemanlarının dilimler halinde ele alabilir ve aralarına yeni eleman(lar) ekleyebilir ya da <u>çıkarılabilir</u>. </p>
+        <strong>Usage splice() add methot</strong>
+        <br>
+        <code>cars.splice(2,0,'ford')</code>
+        <small>index 2'ye 'ford' ekle.</small>
+        <p class="result">result : added item <span id="tutorial-array-13"></span>, last state of the index <span id="tutorial-array-14"></span></p>
+        <strong>Usage splice() remove methot</strong>
+        <br>
+        <code>cars.splice(0,2)</code>
+        <small>index 0'dan sonra iki eleman sil.</small>
+        <p class="result">result : remove item(s) <span id="tutorial-array-15"></span>, last state of the index <span id="tutorial-array-16"></span></p>
+    </div>
+    <div class="container">
+        <h3>Merge Methot</h3>
+        <p>"Concat" metotu bir dizinin elemanlarını başka bir dizi ile <u>birleştirir</u>.</p>
+        <strong>Usage concat() methot</strong>
+        <br>
+        <code>cars.concat(cars2)</code>
+        <p class="result">result : merge arrays <span id="tutorial-array-17"></span>, last state of the index <span id="tutorial-array-18"></span></p>
+    </div>
+    <div class="container">
+        <h3>Slice Methot</h3>
+        <p>"Slice" metotu bir dizinin elemanlarını başka bir diziye <u>ayırır</u>.</p>
+        <strong>Usage slice() methot</strong>
+        <br>
+        <code>var cars2 = cars.slice(2)</code>
+        <p class="result">result : new array "cars2" lenght 0 while last state of the index  <span id="tutorial-array-19"></span>, cars array last state of the index <span id="tutorial-array-20"></span></p>
+    </div>
+</body>
+<script src="array.js"></script>
+<script>
+    ArrayProject.init();
+</script>
+</html>
